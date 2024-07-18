@@ -38,15 +38,20 @@ const feedbackDiv= document.getElementById('form-feedback');
               } else {
                 isValid = true;
               }
-    feedbackDiv.style.display="block";
-    if(isValid=True){
-        feedbackDiv.textContent="Registration successful!"
-        feedbackDiv.style.color="#28a745";
-    }else{
-
-        feedbackDiv.innerHTML=messages.join (",");
-        feedbackDiv.style.color="#dc3545";
-
-    }
+    function handleRegistration(isValid, messages) {
+                const feedbackDiv =  document.getElementById('form-feedback');
+              
+                feedbackDiv.style.display = "block";
+              
+                if (isValid) {
+                  feedbackDiv.textContent = "Registration successful!";
+                  feedbackDiv.style.color = "#28a745";
+                } else {
+                  const errorMessage = messages.join("<br>");
+              
+                  feedbackDiv.innerHTML = errorMessage;
+                  feedbackDiv.style.color = "#dc3545";
+                }
+              }
     });
     
