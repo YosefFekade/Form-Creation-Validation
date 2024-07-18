@@ -1,7 +1,7 @@
 const form = document.getElementById('registrationForm');
 const feedbackDiv= document.getElementById('form-feedback');
 
-    form.addEventListener('submit', function(event) {
+    form.addEventListener('DOMContentLoaded', function(event) {
 
 
       event.preventDefault(); 
